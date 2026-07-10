@@ -2,7 +2,6 @@ name: Pipeline Pertama
 on:
   push:
     branches: ["main"]
-
 jobs:
   hello:
     runs-on: ubuntu-latest
@@ -10,14 +9,12 @@ jobs:
     steps:
       - name: Ucapin salam
         run: echo "Halo, ini pipeline pertamaku!"
-
       - name: Cek waktu sekarang
         run: date
-
   Lint:
   runs-on: ubuntu-latest
   steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: install flakse8
         run: pip install flake8
       - name: Run linter
